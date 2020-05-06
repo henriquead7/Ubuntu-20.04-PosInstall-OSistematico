@@ -1,0 +1,65 @@
+# Cada extensão foi baixada manualmente, testada em VM, configurada e adicionada ao diretório Gnome_"Extensions"
+
+#OBS.: Os nomes dos arquivos mudam a cada nova versão baixada, caso for customizar posteriormente, lembre-se disso
+
+# Blyr (default)
+# NOME:blyryozoon.dev.gmail.com.v7.shell-extension.zip
+# UUID:blyr@yozoon.dev.gmail.com
+# SITE:https://extensions.gnome.org/extension/1251/blyr/
+
+# CustomCorner (Com minhas configs)
+# NOME:customcorner@eccheng.gitlab.com.v3.shell-extension.zip
+# UUID:customcorner@eccheng.gitlab.com
+# SITE:https://extensions.gnome.org/extension/1037/customcorner/
+
+# GSConnect (default)
+# NOME:gsconnectandyholmes.github.io.v37.shell-extension.zip
+# UUID:gsconnect@andyholmes.github.io
+# SITE:https://extensions.gnome.org/extension/1319/gsconnect/
+
+# Impatience (default)
+# NOME:impatiencegfxmonk.net.v15.shell-extension.zip
+# UUID:impatience@gfxmonk.net
+# SITE:https://extensions.gnome.org/extension/277/impatience/
+
+# More columns in applications view (Com minhas configs)
+# NOME:set-columnsmaestroschan.fr.v2.shell-extension.zip
+# UUID:set-columns@maestroschan.fr
+# SITE:https://extensions.gnome.org/extension/1305/more-columns-in-applications-view/
+
+# OpenWeather (default/Adicione o endereço de onte vc mora)
+# NOME:openweather-extensionjenslody.de.v102.shell-extension.zip
+# UUID:openweather-extension@jenslody.de
+# SITE:https://extensions.gnome.org/extension/750/openweather/
+
+# Removable Drive Menu (default)
+# NOME:drive-menugnome-shell-extensions.gcampax.github.com.v43.shell-extension.zip
+# UUID:drive-menu@gnome-shell-extensions.gcampax.github.com
+# SITE:https://extensions.gnome.org/extension/7/removable-drive-menu/
+
+# Sound Input & Output Device Chooser (Com minhas configs)
+# NOME:sound-output-device-chooserkgshank.net.v29.shell-extension.zip
+# UUID:sound-output-device-chooser@kgshank.net
+# SITE:https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+
+# Transparent Top Bar (Com minhas configs)
+# NOME:transparent-top-barzhanghai.me.v6.shell-extension.zip
+# UUID:transparent-top-bar@zhanghai.me
+# SITE:https://extensions.gnome.org/extension/1708/transparent-top-bar/
+
+# Unite (Com minhas configs)
+# NOME:unitehardpixel.eu.v37.shell-extension.zip
+# UUID:unite@hardpixel.eu
+# SITE:https://extensions.gnome.org/extension/1287/unite/
+
+# User Themes (default)
+# NOME:user-themegnome-shell-extensions.gcampax.github.com.v40.shell-extension.zip
+# UUID:user-theme@gnome-shell-extensions.gcampax.github.com
+# SITE:https://extensions.gnome.org/extension/19/user-themes/
+
+# WindowOverlay Icons (Com minhas configs)
+# NOME:windowoverlay-iconssustmidown.centrum.cz.v34.shell-extension.zip
+# UUID:windowoverlay-icons@sustmidown.centrum.cz
+# SITE:https://extensions.gnome.org/extension/302/windowoverlay-icons/
+
+#
