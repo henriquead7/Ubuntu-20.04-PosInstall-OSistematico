@@ -1,0 +1,39 @@
+Compilei o "script_loguin.sh" para aumentar o nível de segurança do mesmo. Afinal, ele acaba armazenando a "senha SUDO" em uma variável.
+
+Caso queira fazer o mesmo com os demais scripts, ou com algum que crie futuramente, instale em sua distribuição (no caso Ubuntu) com  o seguint comando:
+
+sudo apt install shc
+
+Sua utilização é simples, eis um breve exemplo:
+
+shc -rvf script.sh
+
+Sendo que: 
+
+    f = arquivo a ser compilado;
+    v = modo verbose;
+    r = torna compatível com outras distros. 
+
+Dois arquivos serão gerados, um "script.x" que é o binário executáveil e outro de nome "sript.x.c" que foi convertido em C.
+
+Para melhor entendimento, você pode renomear  o "script.x" para "sript.bin" (de binário).
+
+Dê a permisssão para execução:
+
+chmod +x script.x
+
+OU se tiver renomeado.
+
+chmod +x script.bin
+
+Outro detalhe importante, o seu script deve começar com:
+
+#!/bin/bash   
+
+Tenho costume de chamar o enterpretador no script por:
+
+#!/usr/bin/env bash
+
+Contudo, este modo é ineficaz no uso do SHC.
+
+ 
