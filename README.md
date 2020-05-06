@@ -23,7 +23,7 @@ Este script é um projeto pessoal criado para sanar minhas necessidades ao efetu
 
 ## Requisitos e mais detalhes
 
-O script faz uso do utilitário ***"zenity"*** (que desenha as caixas de dialogo em GTK+), logo o mesmo é requisito para seu funcionamento. O Ubuntu 20.04 LTS, na qual destina-se inicialmente o uso deste script, já acompanha por default o pacote. Caso pretende utilizar em outro sistema, atente-se para este ponto.
+O script faz uso do utilitário ***"zenity"*** (que desenha as caixas de dialogo em GTK+), logo o mesmo é requisito para seu funcionamento. O Ubuntu 20.04 LTS, na qual destina-se inicialmente o uso deste script, já acompanha por default o pacote. Caso vise utilizar em outro sistema, atente-se para este ponto.
 
 Existem diversos scripts dentro do diretório ***"Scripts"***, pois o arquivo ***"login.bin"*** que na realidade é o arquivo ***"script_login.sh"*** compilado em C. "Chama" o ***"script_menu.sh"*** ao digitar corretamente a senha de ***SUDO***, que consequentemente recorre aos demais scripts efetuando assim suas funções.
 
@@ -31,7 +31,7 @@ Fica ao seu gosto qual arquivo executar, para iniciar o script de pós-instalaç
 
 Outros diretórios são de extrema importância, sem eles o script não funcionará de forma correta. Então, preserve a hierarquia e estrutura dos diretórios.
 
-***Utilize o script sem SUDO***, não existe a necessidade do uso via Root ou com o comando ```"sudo ./login.bin"```. 
+***Utilize o script SEM SUDO***, não existe a necessidade do uso via Root ou com o comando ```"sudo ./login.bin"```. 
 
 
 
@@ -43,7 +43,7 @@ Usuários do ***Pop_OS!*** Podem utilizar o script alterando poucos detalhes, co
 * Remover a adição do PPA do Lutris;
 * Adicionar no script que automatiza a instalação de extensões do GNOME-Shell, a Dash-to-Dock. Ou descartar o uso do script que customiza a extensão Ubuntu Dock (Dash-to-Dock);
 * Remover no script que instala Flatpaks a adição do repositório Flathub;
-* Caso queira utilizar Snaps, será necessário instalar previamente o pacote "snapd" no script que instala pacotes via APT.
+* Caso queira utilizar Snaps, será necessário instalar previamente o pacote ***"snapd"*** no script que instala pacotes via APT.
 
 
 
@@ -63,7 +63,7 @@ chmod +x script_login.sh
 chmod +x -R * Scripts/
 ```
 
-Conforme mencionado anteriormente, não existe a necessidade de executar logado como Root. A construção deste script foi pensada no uso de um "usuário comum" que em alguns momentos recebe os poderes de "super usuário". Assim sendo, sua senha será solicitada ao executar o arquivo no terminal com ```"./loguin.bin"``` ou se não preferir o binário ```"./script_login.sh"``` (sem as aspas, obviamente).
+Conforme mencionado anteriormente, não existe a necessidade de executar logado como Root. A construção deste script foi pensada no contexto de um "usuário comum" que em alguns momentos recebe os poderes de "super usuário". Assim sendo, sua senha será solicitada ao executar o arquivo no terminal com ```"./loguin.bin"``` ou se não preferir o binário ```"./script_login.sh"``` (sem as aspas, obviamente).
 
 ![Demonstração do script em ação](https://github.com/HenriqueAD7/Ubuntu-20.04-PosInstall-OSistematico/blob/master/Imagens_Apresenta%C3%A7%C3%A3o/imagem_apresenta%C3%A7%C3%A3o.gif)
 
@@ -73,7 +73,7 @@ Se por algum motivo usou anteriormente o terminal como Root ou fez uso do comand
 
 ## O que cada categoria do script faz?
 
-Ao todo são 14 categorias, você pode fazer todo o processo com apenas uma opção ou custimizar utilizando cada uma separdamente.
+Ao todo são 14 categorias, você pode fazer todo o processo com apenas uma opção ou customizar a pós-instalação do sistema utilizando cada uma separdamente.
 
 * ***ATUALIZAR***      - Atualiza os pacotes do sistema via APT;
 * ***APT/PPA***        - Adiciona repositórios de terceiros, instala pacotes via APT;
@@ -90,7 +90,7 @@ Ao todo são 14 categorias, você pode fazer todo o processo com apenas uma opç
 * ***ORGANIZAR PASTAS MENU GNOME AD*** - Organiza as pastas do Shell/menu (AppFolder) como utilizo geralmente;
 * ***TODAS OPÇÕES AD*** - Executa todas as opções anteriores, salve resguardo as "duplicadas que não tenham AD" no nome.
 
-OBS.: A opção ***VISUAL UBUNTU** precisa previamente que a extensão ***"User Themes"*** esteja instalada. Entretanto a anterior, ***"GNOME EXTENSÕES"***, instala tal pendência. Este é o requisito para aplicar o tema dark no shell do Ubuntu.
+***OBS.:*** A opção ***VISUAL UBUNTU** precisa previamente que a extensão ***"User Themes"*** esteja instalada. Entretanto a anterior, ***"GNOME EXTENSÕES"***, instala tal pendência. Este é o requisito para aplicar o tema dark no shell do Ubuntu.
 
 
 
