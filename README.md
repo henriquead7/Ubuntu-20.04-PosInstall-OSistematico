@@ -51,7 +51,7 @@ Usuários do ***Pop_OS!*** Podem utilizar o script alterando poucos detalhes, co
 
 Antes de executar veja se os scripts possuem as devidas permissões de execução. 
 
-Este comandos podem ser utilizados, caso não queira conferir um a um, dando a permissão de execução as arquivos. Note que mais uma vez ***não é nescessário o uso do SUDO***.
+Estes comandos podem ser utilizados, caso não queira conferir um a um, dando a permissão de execução aos arquivos. Note que mais uma vez ***não é nescessário o uso do SUDO***.
 
 ```
 chmod +x login.bin
