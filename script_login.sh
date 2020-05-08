@@ -40,6 +40,3 @@ else
 fi
 
 exit
-
-
-exit
