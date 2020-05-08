@@ -14,8 +14,8 @@ Este script é um projeto pessoal criado para sanar minhas necessidades ao efetu
 * ***Download de apps em AppImage;***
 * ***Instalação de apps em Snap;***
 * ***Adição do Flathub e instalação de apps em Flatpak;***
-* ***Instalação automátizada de extensões do GNOME-Shell;***
-* ***Customizações visuais no Ubuntu.***
+* ***Instalação automátizada de extensões do GNOME-Shell;*** (Por enquanto você deve configurá-las depois de instaladas).
+* ***Customizações visuais no Ubuntu.*** (Devido há algum bug do Ubuntu ou GNOME-Shell 3.36 o tema escuro do Ubuntu deve ser configurado via "Ajustes"/"gnome-tweaks").
 
 ![Ubuntu 20.04 LTS com GNOME-Shell personalizado](https://github.com/HenriqueAD7/Ubuntu-20.04-PosInstall-OSistematico/blob/master/Imagens_Apresenta%C3%A7%C3%A3o/imagem_GNOME_Shell.png)
 
@@ -25,13 +25,13 @@ Este script é um projeto pessoal criado para sanar minhas necessidades ao efetu
 
 O script faz uso do utilitário ***"zenity"*** (que desenha as caixas de dialogo em GTK+), logo o mesmo é requisito para seu funcionamento. O Ubuntu 20.04 LTS, na qual destina-se inicialmente o uso deste script, já acompanha por default o pacote. Caso vise utilizar em outro sistema, atente-se para este ponto.
 
-Existem diversos scripts dentro do diretório ***"Scripts"***, pois o arquivo ***"login.bin"*** que na realidade é o arquivo ***"script_login.sh"*** compilado em C. "Chama" o ***"script_menu.sh"*** ao digitar corretamente a senha de ***SUDO***, que consequentemente recorre aos demais scripts efetuando assim suas funções.
+Nem preciso dizer que conexão com internet é um requisito, outro ponto é que por default o script instala todo tipo de app (só não compilei nenhum app no processo). Todavia Snap, Flatpak e AppImage fazem parte do processo.
 
-Fica ao seu gosto qual arquivo executar, para iniciar o script de pós-instalação. Recomendo utilizar o ***"login.bin"***, assim existe uma maior segurança ao executar o script. Dentro do diretório ***"Fonte_Binário"*** existe o source em C e instruções num arquivo txt. Resumidamente, o ***"script_login.sh"*** armazena em variável sua senha de ***SUDO*** (que foi obtiva via Zenity, como password) e em tese o binário trará uma camada à mais de segurança. Tambem detalho a receita para compilar o ***"script_login.sh"*** por meio do utilitário SHC.
+Existem diversos scripts dentro do diretório ***"Scripts"***, pois o arquivo ***"script_login.sh"*** chama o ***"script_menu.sh"*** ao digitar corretamente a senha de ***SUDO***, que consequentemente recorre aos demais scripts efetuando assim suas funções.
 
 Outros diretórios são de extrema importância, sem eles o script não funcionará de forma correta. Então, preserve a hierarquia e estrutura dos diretórios.
 
-***Utilize o script SEM SUDO***, não existe a necessidade do uso via Root ou com o comando ```"sudo ./login.bin"```. 
+***Utilize o script SEM SUDO***, não existe a necessidade do uso via Root ou com o comando ```"sudo ./script_login.sh"```. 
 
 
 
@@ -43,6 +43,7 @@ Usuários do ***Pop_OS!*** Podem utilizar o script alterando poucos detalhes, co
 * Remover a adição do PPA do Lutris;
 * Adicionar no script que automatiza a instalação de extensões do GNOME-Shell, a Dash-to-Dock. Ou descartar o uso do script que customiza a extensão Ubuntu Dock (Dash-to-Dock);
 * Remover no script que instala Flatpaks a adição do repositório Flathub;
+* Remover ou comentar no ***"script_remove_pacotes.sh"*** o trecho em que os Snaps são utilizados;
 * Caso queira utilizar Snaps, será necessário instalar previamente o pacote ***"snapd"*** no script que instala pacotes via APT.
 
 
@@ -54,16 +55,13 @@ Antes de executar veja se os scripts possuem as devidas permissões de execuçã
 Estes comandos podem ser utilizados, caso não queira conferir um a um, dando a permissão de execução aos arquivos. Note que mais uma vez ***não é nescessário o uso do SUDO***.
 
 ```
-chmod +x login.bin
-```
-```
 chmod +x script_login.sh
 ```
 ```
 chmod +x -R * Scripts/
 ```
 
-Conforme mencionado anteriormente, não existe a necessidade de executar logado como Root. A construção deste script foi pensada no contexto de um "usuário comum" que em alguns momentos recebe os poderes de "super usuário". Assim sendo, sua senha será solicitada ao executar o arquivo no terminal com ```"./loguin.bin"``` ou se não preferir o binário ```"./script_login.sh"``` (sem as aspas, obviamente).
+Conforme mencionado anteriormente, não existe a necessidade de executar logado como Root. A construção deste script foi pensada no contexto de um "usuário comum" que em alguns momentos recebe os poderes de "super usuário". Assim sendo, sua senha será solicitada ao executar o arquivo no terminal ```"./script_login.sh"``` (sem as aspas, obviamente).
 
 ![Demonstração do script em ação](https://github.com/HenriqueAD7/Ubuntu-20.04-PosInstall-OSistematico/blob/master/Imagens_Apresenta%C3%A7%C3%A3o/imagem_apresenta%C3%A7%C3%A3o.gif)
 
@@ -73,9 +71,9 @@ Se por algum motivo usou anteriormente o terminal como Root ou fez uso do comand
 
 ## O que cada categoria do script faz?
 
-Ao todo são 14 categorias, você pode fazer todo o processo com apenas uma opção ou customizar a pós-instalação do sistema utilizando cada uma separdamente.
+Ao todo são 14 categorias, você pode fazer todo o processo com apenas uma opção ou customizar o pós-instalação do sistema utilizando cada uma separdamente.
 
-* ***ATUALIZAR***      - Atualiza os pacotes do sistema via APT;
+* ***ATUALIZAR***      - Atualiza os pacotes do sistema via APT (Antes disso remove alguns pacotes);
 * ***APT/PPA***        - Adiciona repositórios de terceiros, instala pacotes via APT;
 * ***DEBS***           - Baixa e instala pacotes ".DEB";
 * ***EXECUTÁVEIS***    - Baixa arquivos executáveis e os adiciona em seus respectivos diretórios na $HOME;
@@ -90,7 +88,9 @@ Ao todo são 14 categorias, você pode fazer todo o processo com apenas uma opç
 * ***ORGANIZAR PASTAS MENU GNOME AD*** - Organiza as pastas do Shell/menu (AppFolder) como utilizo geralmente;
 * ***TODAS OPÇÕES AD*** - Executa todas as opções anteriores, salve resguardo as "duplicadas que não tenham AD" no nome.
 
-***OBS.:*** A opção ***VISUAL UBUNTU** precisa previamente que a extensão ***"User Themes"*** esteja instalada. Entretanto a anterior, ***"GNOME EXTENSÕES"***, instala tal pendência. Este é o requisito para aplicar o tema dark no shell do Ubuntu.
+***OBS.:*** A opção ***VISUAL UBUNTU** precisa previamente que a extensão ***"User Themes"*** esteja instalada. Entretanto a anterior, ***"GNOME EXTENSÕES"***, instala tal pendência. Este é o requisito para aplicar o tema dark no shell do Ubuntu. Porém, devido algum bug do Ubuntu 20.04 LTS ou do GNOME-Shell 3.36 (ainda não testei em outros sistemas) o comando utilizado para trocar o tema do shell não está funcionando. Faça via GNOME Tweaks/"Ajustes".
+
+Outra informação é que no Ubuntu 20.04 LTS, no momento em que escrevo isso, a função de pastas de apps (Appfoldes) no menu do GNOME-Shell eventualmente trava o sistema durante seu uso prolongado ou constante. Tal erro ocorreu sem nenhuma extensão deste script, como depois de instalados. Seja em VM ou máquina física, tal bug esteve presente.
 
 
 
