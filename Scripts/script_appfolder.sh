@@ -110,4 +110,3 @@ echo ""
 echo -e $corYellow " --- Apps organizados em pastas no menu! --- \033[0m"
 echo ""
 echo ""
-
