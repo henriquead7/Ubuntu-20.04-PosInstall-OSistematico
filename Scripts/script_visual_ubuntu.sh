@@ -28,6 +28,9 @@ CAMINHO=$(head -n 1 $HOME/Caminho.txt)
 DIR_CUSTOM="Custom"
 CURSOR_THEME="Yaru-AD7-cursor"
 
+# Apaga tudo dentro de ".icons" (isso evita comandos adicionais, quando extrair os ícones novamente no diretório)
+rm $HOME/.icons/*
+
 # Cria diretóroio ".icons" na home.
 mkdir "$HOME/.icons"
 
@@ -52,4 +55,3 @@ rm $HOME/Caminho.txt
 echo ""
 echo -e $corBlue " --- Visual do sistema customizado! --- \033[0m"
 echo ""
-
