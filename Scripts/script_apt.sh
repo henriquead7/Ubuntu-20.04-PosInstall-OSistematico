@@ -30,6 +30,8 @@ PPA_LUTRIS="ppa:lutris-team/lutris"
 #  piper
 #  ttf-mscorefonts-installer [não adicionar em APPS,  pois solicita confirmação]
 #  ubuntu-restricted-extras  [não adicionar em APPS,  pois solicita confirmação]
+#  vulkan-utils
+#  virtualbox
 
 # OBS.: Caso não queira instalar a GNOME Software, que suportará Flatpaks, retire ela e o plugin do Flatpak da lista. 
 # Além de comentar no "script_remove_pacotes" o código que remove/reinstala a Snap Store em Snap. 
@@ -39,6 +41,9 @@ APPS=(
   gnome-software
   gnome-software-plugin-flatpak
   transmission-gtk
+  libvulkan1
+  vulkan-utils
+  mesa-vulkan-drivers
   qrencode
   pdfmod
   language-pack-gnome-pt
@@ -60,7 +65,6 @@ APPS=(
   gparted
   synaptic
   vlc
-  virtualbox
   menulibre
   deepin-terminal
   deepin-screenshot
@@ -74,7 +78,6 @@ APPS=(
   playonlinux
   jstest-gtk
   cpufrequtils
-  libvulkan1
 )
 
 # ---------- SUPORTE ARQUITETURA 32 BITS ---------- #
