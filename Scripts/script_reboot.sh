@@ -28,7 +28,7 @@ done | zenity  --progress --title="REBOOT AUTOMÁTICO"  \
 if [ $? = 0 ] ; then
     echo ${senha} | (sudo -S shutdown -h now)
 else 
-    echo "Reinicie o mais rápido possivél, só assim as mudanças serão aplicadas corretamente" 
+    echo "Reinicie o mais rápido possível, só assim as mudanças serão aplicadas corretamente" 
 fi
 
 exit
