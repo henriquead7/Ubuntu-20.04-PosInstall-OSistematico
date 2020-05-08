@@ -18,5 +18,4 @@ senha="$1"
 # ----------------------------- PÓS-INSTALL ----------------------------- #
 
 echo -e $corYellow " --- Efetuando o pós-instalação do sistema --- \033[0m"
-echo ${senha} | (sudo -S apt list --upgradable && sudo -S apt update -y && sudo -S apt dist-upgrade -y && sudo -S apt install -f && sudo -S apt autoremove -f && sudo -S apt autoclean -y && sudo -S snap refresh && flatpak update -y)
-
+echo ${senha} | (sudo -S apt list --upgradable && sudo -S apt update -y && sudo -S apt dist-upgrade -y && sudo -S apt install -f && sudo -S apt autoremove -y && sudo -S apt autoclean -y && sudo -S snap refresh && flatpak update -y)
