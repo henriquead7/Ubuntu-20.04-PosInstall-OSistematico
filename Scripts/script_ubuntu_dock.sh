@@ -42,4 +42,3 @@ gsettings set org.gnome.shell favorite-apps "['google-chrome.desktop', 'firefox.
 echo ""
 echo -e $corBlue " --- Ubuntu Dock pronta! --- \033[0m"
 echo ""
-
