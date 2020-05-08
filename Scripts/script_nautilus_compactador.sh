@@ -29,4 +29,3 @@ fi
 echo ""
 echo -e $corGreen " --- Script de compressão adicionado ao Nautilus! --- \033[0m"
 echo ""
-
