@@ -23,4 +23,3 @@ echo ${senha} | (sudo -S apt list --upgradable && sudo -S apt update -y && sudo 
 echo ""
 echo -e $corBlue " --- Sistema atualizado com sucesso! --- \033[0m"
 echo ""
-
