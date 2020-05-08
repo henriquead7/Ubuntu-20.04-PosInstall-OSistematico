@@ -28,10 +28,17 @@ PPA_LUTRIS="ppa:lutris-team/lutris"
 # APPS FORA DA LISTA (Opcionais)
 #  ratbagd
 #  piper
-#  ttf-mscorefonts-installer
+#  ttf-mscorefonts-installer [não adicionar em APPS,  pois solicita confirmação]
+#  ubuntu-restricted-extras  [não adicionar em APPS,  pois solicita confirmação]
+
+# OBS.: Caso não queira instalar a GNOME Software, que suportará Flatpaks, retire ela e o plugin do Flatpak da lista. 
+# Além de comentar no "script_remove_pacotes" o código que remove/reinstala a Snap Store em Snap. 
 
 APPS=(
-  ubuntu-restricted-extras
+  flatpak
+  gnome-software
+  gnome-software-plugin-flatpak
+  transmission-gtk
   qrencode
   pdfmod
   language-pack-gnome-pt
@@ -60,7 +67,7 @@ APPS=(
   deepin-deb-installer
   steam-installer
   steam-devices
-  steam:i386
+  steam
   wine
   winetricks
   lutris
@@ -68,16 +75,6 @@ APPS=(
   jstest-gtk
   cpufrequtils
   libvulkan1
-  libvulkan1:i386
-  libgnutls30:i386
-  libldap-2.4-2:i386
-  libgpg-error0:i386
-  libxml2:i386
-  libasound2-plugins:i386
-  libsdl2-2.0-0:i386
-  libfreetype6:i386
-  libdbus-1-3:i386
-  libsqlite3-0:i386
 )
 
 # ---------- SUPORTE ARQUITETURA 32 BITS ---------- #
@@ -102,12 +99,6 @@ echo ${senha} | (sudo -S add-apt-repository "$PPA_LUTRIS" -y)
 #echo ${senha} | (sudo apt-add-repository "deb $URL_PPA_WINE focal main")
 echo ""
 
-# ---------- REMOVER APPS VIA APT ---------- #
-echo ""
-echo -e $corRed " --- Removendo limitador de CPU do Ubuntu --- \033[0m"
-echo ${senha} | (sudo -S apt remove irqbalance)
-echo ""
-
 # ---------- INSTALAR APPS VIA APT ---------- #
 
 echo -e $corGreen " --- Instalando pacotes via APT --- \033[0m"
@@ -120,9 +111,11 @@ for nome_do_app in ${APPS[@]}; do
   fi
 done
 
+# Instala o pacote sem as fontes Microsoft
+echo ${senha} | (sudo -S apt --no-install-recommends install ubuntu-restricted-extras -y)
+
 # REMOVER COMENTÁRIO NO CASO DA ADIÇÃO DO PPA WINE
 #echo ${senha} | (sudo -S apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y)
 echo ""
 echo -e $corGreen " --- Instalação de pacotes via APT finalizada! --- \033[0m"
 echo ""
-
