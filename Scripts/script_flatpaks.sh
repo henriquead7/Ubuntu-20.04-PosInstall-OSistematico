@@ -12,6 +12,9 @@ export corRed="\033[1;31m" #Remoção VERMELHO
 export corGrey="\033[40;1;37m" #CINZA
 export corYellow="\033[1;33m" #AMARELO
 
+# ---------- PARAMETRO PASSADO DE script_menu ---------- #
+senha="$1"
+
 # ---------- VARIÁVEIS DE AMBIENTE APPS ---------- #
 
 # FLATPAKS FORA DA LISTA (Opcionais)
@@ -52,7 +55,7 @@ FLATPAKS=(
 # ---------- ADICIONANDO REPOSITÓRIO FLATHUB ----------- #
 echo ""
 echo -e $corYellow " --- Adicionando o repositório Flathub --- \033[0m"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+echo ${senha} | (sudo -S flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo)
 echo ""
 
 # ---------- INSTALANDO FLATPAKS ----------- #
@@ -66,4 +69,3 @@ flatpak install https://flatpak.citra-emu.org/citra-nightly.flatpakref -y # Flat
 echo ""
 echo -e $corGreen " --- Flatpaks instalados com sucesso! --- \033[0m"
 echo ""
-
