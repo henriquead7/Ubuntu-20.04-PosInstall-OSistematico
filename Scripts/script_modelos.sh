@@ -17,15 +17,17 @@ export corYellow="\033[1;33m" #AMARELO
 # Adiciona em arquivo TXT o local onde está sendo executado o scrip
 pwd | sed 's/ /\\ /g' > $HOME/Caminho.txt
 
-#Acessa os modelos para serem utilizados no Nautilus dentro da pasta "Modelos", que deve estar no mesmo diretório do script
+# Acessa os modelos para serem utilizados no Nautilus dentro da pasta "Modelos", que deve estar no mesmo diretório do script
 CAMINHO=$(head -n 1 $HOME/Caminho.txt)
 DIR_MODELOS="Modelos"
- 
+
+# Apaga os modelos antes de adicionar os novos
+rm $HOME/Modelos/*
+
 unzip $CAMINHO/$DIR_MODELOS/Modelos.zip -d $HOME/Modelos/
 
-
+rm $HOME/Caminho.txt
 # gnome-shell -r & # Não feche o terminal [Melhor fazer isso manualmente, ou reiniciar o sistema]
 echo ""
 echo -e $corGreen " --- Arquivos modelos adicionados com sucesso! --- \033[0m"
 echo ""
-
