@@ -17,6 +17,8 @@ Este script é um projeto pessoal criado para sanar minhas necessidades ao efetu
 * ***Instalação automátizada de extensões do GNOME-Shell;*** (Por enquanto você deve configurá-las depois de instaladas).
 * ***Customizações visuais no Ubuntu.*** (Devido há algum bug do Ubuntu ou GNOME-Shell 3.36 o tema escuro do Ubuntu deve ser configurado via "Ajustes"/"gnome-tweaks").
 
+
+
 ![Ubuntu 20.04 LTS com GNOME-Shell personalizado](https://github.com/HenriqueAD7/Ubuntu-20.04-PosInstall-OSistematico/blob/master/Imagens_Apresenta%C3%A7%C3%A3o/imagem_GNOME_Shell.png)
 
 
