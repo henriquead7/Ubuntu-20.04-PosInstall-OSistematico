@@ -51,4 +51,3 @@ echo ${senha} | (sudo -S apt install $DIR_DOWNLOADS/*.deb -y)
 echo ""
 echo -e $corGreen " --- Pacotes DEBs instalados com sucesso! --- \033[0m"
 echo ""
-
