@@ -146,6 +146,11 @@ ARRAY_BIDIMENCIONAL=(
 # Loop simulando um array bidimencional extraindo as extensões compactadas e adicioinando com nome correto no sistema, segundo o UUID
 echo ""
 echo -e $corGreen " --- Instalando as extensões no GNOME-Shell --- \033[0m"
+mkdir ~/.local/share/gnome-shell/extensions/
+
+# Apaga tudo dentro de "extensions" (isso evita comandos adicionais, quando extrair os temas novamente no diretório)
+rm ~/.local/share/gnome-shell/extensions/*
+
 CONTADOR=${#ARRAY_BIDIMENCIONAL[@]}
 for ((i=0; i<$CONTADOR; i++))
 do
@@ -162,6 +167,5 @@ rm $HOME/Caminho.txt
 
 # gnome-shell -r & # Não feche o terminal [Melhor fazer isso manualmente, ou reiniciar o sistema]
 echo ""
-echo -e $corGreen " --- Extensões do GNOME-Shell configuradas com sucesso! --- \033[0m"
+echo -e $corGreen " --- Extensões do GNOME-Shell instaladas com sucesso! --- \033[0m"
 echo ""
-
