@@ -20,7 +20,6 @@ echo ""
 # COMANDO PARA DESFAZER A ORAGANIZAÇÃO DAS PASTAS
 gsettings set org.gnome.desktop.app-folders folder-children "[]"
 
-
 gsettings set org.gnome.desktop.app-folders folder-children "['Acessórios', 'Web-Apps', 'Games', 'Gráficos', 'internet', 'office', 'Desenvolvimento', 'Multimídia', 'Ferramentas', 'Wine']"
 
 #Acessórios
