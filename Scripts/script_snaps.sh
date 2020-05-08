@@ -35,4 +35,3 @@ done
 echo ""
 echo -e $corGreen " --- Snaps instalados com sucesso! --- \033[0m"
 echo ""
-
