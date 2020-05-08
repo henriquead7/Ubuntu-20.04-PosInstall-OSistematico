@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # autor: HenriqueAD <www.osistematico.com.br> <youtube.com/OSistematico>
-# descrição: Remove possivéis travas no APT.
+# descrição: Remove possíveis travas no APT.
 # version: 1.0
 # licença: MIT License
 
@@ -19,8 +19,7 @@ senha="$1"
 # ---------- REMOVENDO TRAVAS NO APT ---------- #
 echo ""
 echo -e $corYellow " --- Removendo possíveis travas do APT --- \033[0m"
-echo ${senha} | (sudo -S rm /var/lib/apt/lists/lock && sudo -S rm /var/cache/apt/archives/lock && sudo -S rm /var/lib/dpkg/lock*)
+echo ${senha} | (sudo -S sudo rm /var/lib/apt/lists/* -vf && sudo -S apt clean -y && sudo -S apt autoclean -y && sudo -S dpkg --configure -a && sudo -S rm /var/lib/apt/lists/lock && sudo -S rm /var/cache/apt/archives/lock && sudo -S rm /var/lib/dpkg/lock* sudo -S rm /var/lib/dpkg/lock-frontend && sudo -S rm /var/cache/debconf/config.dat)
 
 echo ${senha} | (sudo -S dpkg --configure -a && sudo -S apt update -y)
 echo ""
-
