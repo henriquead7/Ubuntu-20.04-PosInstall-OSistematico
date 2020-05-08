@@ -28,4 +28,3 @@ wget -c "$URL_RPCS3_APPIMAGE"       -P "$DIR_APPIMAGES"
 echo ""
 echo -e $corGreen " --- AppImages em suas pastas! --- \033[0m"
 echo ""
-
