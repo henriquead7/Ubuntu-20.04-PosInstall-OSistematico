@@ -25,12 +25,14 @@ while opt=$(zenity --title="$titulo" --text="$prompt" --list --width=500 --heigh
     case "$opt" in
 
     #ATUALIZAR
-    "${options[0]}" ) source $CAMINHO_SCRIPTS/script_apt_remove_travas.sh "$senha" 
+    "${options[0]}" ) source $CAMINHO_SCRIPTS/script_remove_pacotes.sh "$senha"
+                      source $CAMINHO_SCRIPTS/script_apt_remove_travas.sh "$senha" 
                       source $CAMINHO_SCRIPTS/script_atualizar.sh "$senha" 
      ;;
      
     #APT/PPA
-    "${options[1]}" ) source $CAMINHO_SCRIPTS/script_apt.sh "$senha"
+    "${options[1]}" ) source $CAMINHO_SCRIPTS/script_remove_pacotes.sh "$senha"
+                      source $CAMINHO_SCRIPTS/script_apt.sh "$senha" 
      ;;
 
      #DEBS
@@ -46,7 +48,7 @@ while opt=$(zenity --title="$titulo" --text="$prompt" --list --width=500 --heigh
      ;;
     
      #FLATPAKS
-    "${options[5]}" ) source $CAMINHO_SCRIPTS/script_flatpaks.sh
+    "${options[5]}" ) source $CAMINHO_SCRIPTS/script_flatpaks.sh "$senha"
      ;;
 
      #SNAPS
@@ -68,7 +70,8 @@ while opt=$(zenity --title="$titulo" --text="$prompt" --list --width=500 --heigh
      ;;
 
      #UPDADTE + LIMPEZA
-    "${options[10]}" ) source $CAMINHO_SCRIPTS/script_updateLimpeza.sh "$senha"
+    "${options[10]}" ) source $CAMINHO_SCRIPTS/script_apt_remove_travas.sh "$senha" 
+                       source $CAMINHO_SCRIPTS/script_updateLimpeza.sh "$senha"
      ;;
 
      #GNOME MENU CATEGORIAS
@@ -80,19 +83,21 @@ while opt=$(zenity --title="$titulo" --text="$prompt" --list --width=500 --heigh
      ;;
 
      #TODAS OPÇÕES
-    "${options[13]}" ) source $CAMINHO_SCRIPTS/script_apt_remove_travas.sh "$senha" 
+    "${options[13]}" ) source $CAMINHO_SCRIPTS/script_remove_pacotes.sh "$senha"
+                       source $CAMINHO_SCRIPTS/script_apt_remove_travas.sh "$senha" 
                        source $CAMINHO_SCRIPTS/script_atualizar.sh "$senha"
                        source $CAMINHO_SCRIPTS/script_apt.sh "$senha"
                        source $CAMINHO_SCRIPTS/script_debs.sh "$senha"
                        source $CAMINHO_SCRIPTS/script_executaveis.sh "$senha" 
                        source $CAMINHO_SCRIPTS/script_appimages.sh
-                       source $CAMINHO_SCRIPTS/script_flatpaks.sh
+                       source $CAMINHO_SCRIPTS/script_flatpaks.sh "$senha"
                        source $CAMINHO_SCRIPTS/script_snaps.sh "$senha"
                        source $CAMINHO_SCRIPTS/script_ubuntu_dock.sh
                        source $CAMINHO_SCRIPTS/script_extensoes_gnome_shell.sh
                        source $CAMINHO_SCRIPTS/script_visual_ubuntu.sh
                        source $CAMINHO_SCRIPTS/script_modelos.sh
                        source $CAMINHO_SCRIPTS/script_nautilus_compactador.sh
+                       source $CAMINHO_SCRIPTS/script_apt_remove_travas.sh "$senha" 
                        source $CAMINHO_SCRIPTS/script_updateLimpeza.sh "$senha"
 	               source $CAMINHO_SCRIPTS/script_appfolder.sh
                        source $CAMINHO_SCRIPTS/script_reboot.sh "$senha"
