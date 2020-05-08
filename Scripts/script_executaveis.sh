@@ -50,4 +50,3 @@ tar -xvf $DIR_EXEC/$TELEGRAM -C $HOME
 echo ""
 echo -e $corGreen " --- Apps Executáveis em suas pastas! --- \033[0m"
 echo ""
-
