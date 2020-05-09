@@ -92,7 +92,7 @@ Ao todo são 14 categorias, você pode fazer todo o processo com apenas uma opç
 
 ***OBS.:*** A opção ***VISUAL UBUNTU** precisa previamente que a extensão ***"User Themes"*** esteja instalada. Entretanto a anterior, ***"GNOME EXTENSÕES"***, instala tal pendência. Este é o requisito para aplicar o tema dark no shell do Ubuntu. Porém, devido algum bug do Ubuntu 20.04 LTS ou do GNOME-Shell 3.36 (ainda não testei em outros sistemas) o comando utilizado para trocar o tema do shell não está funcionando. Faça via GNOME Tweaks/"Ajustes".
 
-Outra informação é que no Ubuntu 20.04 LTS, no momento em que escrevo isso, a função de pastas de apps (Appfoldes) no menu do GNOME-Shell eventualmente trava o sistema durante seu uso prolongado ou constante. Tal erro ocorreu sem nenhuma extensão deste script, como depois de instalados. Seja em VM ou máquina física, tal bug esteve presente.
+Outra informação é que no Ubuntu 20.04 LTS, no momento em que escrevo isso, a função de pastas de apps (Appfoldes) no menu do GNOME-Shell eventualmente trava o sistema durante seu uso prolongado ou constante. Tal erro ocorre devido um bug da extensão Ubuntu Dock. Seja em VM ou máquina física, tal bug esteve presente.
 
 
 
